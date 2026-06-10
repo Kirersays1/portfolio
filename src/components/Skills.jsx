@@ -1,60 +1,49 @@
-import icon1 from "../assets/img/webCreator.svg"
-import icon2 from "../assets/img/mobileCreator.svg"
-import icon3 from "../assets/img/gameCreator.svg"
-import icon4 from "../assets/img/security.svg"
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
-export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  }
+import { useState } from 'react';
+import { skills } from '../data/portfolio';
+import styles from './Skills.module.css';
+
+export default function Skills() {
+  const [activeIdx, setActiveIdx] = useState(null);
 
   return (
-    <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx">
-                        <h2>Skills</h2>
-                        <p>In my free times and work-project based, i have developed the following skills:</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={icon1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={icon2} alt="Image" />
-                                <h5>Mobile Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={icon3} alt="Image" />
-                                <h5>Game Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={icon4} alt="Image" />
-                                <h5>Cibersecurity</h5>
-                            </div>
-                        </Carousel>
-                    </div>
-                </div>
-            </div>
+    <section id="skills" className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <span className={styles.sectionNum}>01</span>
+          <h2 className={styles.title}>SKILL_TREE.DAT</h2>
+          <div className={styles.line} />
         </div>
+        <div className={styles.prompt}>
+          <span className={styles.green}>C:\&gt;</span>
+          <span className={styles.cmd}> ls -la /skills/</span>
+        </div>
+        <div className={styles.grid}>
+          {skills.map((group, i) => (
+            <div
+              key={group.category}
+              className={`${styles.card} ${activeIdx === i ? styles.active : ''}`}
+              onMouseEnter={() => setActiveIdx(i)}
+              onMouseLeave={() => setActiveIdx(null)}
+            >
+              <div className={styles.cardHeader}>
+                <span className={styles.cardIdx}>[{String(i).padStart(2,'0')}]</span>
+                <span className={styles.cardTitle}>{group.category}</span>
+                <span className={styles.cardCount}>{group.items.length}_items</span>
+              </div>
+              <div className={styles.items}>
+                {group.items.map(item => (
+                  <span key={item} className={styles.item}>
+                    <span className={styles.bullet}>▸</span> {item}
+                  </span>
+                ))}
+              </div>
+              <div className={styles.bar}>
+                <div className={styles.barFill} style={{ width: `${65 + i * 5}%` }} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
-  )
+  );
 }

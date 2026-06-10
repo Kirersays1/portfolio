@@ -1,0 +1,61 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 52px;
+  background: rgba(8,8,8,0.95);
+  border-bottom: 1px solid #222;
+  backdrop-filter: blur(4px);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.logoText {
+  font-family: 'VT323', monospace;
+  font-size: 28px;
+  color: #33FF33;
+  text-shadow: 0 0 12px rgba(51,255,51,0.6);
+  letter-spacing: 2px;
+}
+.cursor {
+  font-family: 'VT323', monospace;
+  font-size: 28px;
+  color: #33FF33;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+.links {
+  display: flex;
+  gap: 8px;
+}
+.link {
+  background: none;
+  border: none;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  padding: 6px 14px;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+.link:hover { color: #33FF33; }
+.active {
+  color: #33FF33 !important;
+  text-shadow: 0 0 8px rgba(51,255,51,0.5);
+}
+.prompt { color: #33FF33; margin-right: 2px; }
+.clock {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  color: #444;
+  letter-spacing: 2px;
+}

@@ -1,60 +1,52 @@
-export const Work = () => {
-  
-  return (
-    <section className="work" id="works">
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="work-bx">
-              <h2>Work</h2>
-              <p>A brief summary of my job experience</p>
-              <ul class="timeline">
-                <li>
-                  <div class="direction-r">
-                    <div class="flag-wrapper">
-                      <span class="flag">Freelancer</span>
-                      <span class="time-wrapper">
-                        <span class="time">Present</span>
-                      </span>
-                    </div>
-                    <div class="desc">Working on online projects</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="direction-l">
-                    <div class="flag-wrapper">
-                      <span class="flag">Amocali AC</span>
-                      <span class="time-wrapper">
-                        <span class="time">January 2023 - December 2023</span>
-                      </span>
-                    </div>
-                    <div class="desc">
-                      Mobile Developer.
-                      <br /> Designed SIGAMEX App with my team
-                    </div>
-                  </div>
-                </li>
+import { work } from '../data/portfolio';
+import styles from './Work.module.css';
 
-                <li>
-                  <div class="direction-r">
-                    <div class="flag-wrapper">
-                      <span class="flag">ITCG</span>
-                      <span class="time-wrapper">
-                        <span class="time">2019 - 2023</span>
-                      </span>
-                    </div>
-                    <div class="desc">
-                      Student, graduated with honorable mention
-                      <br />
-                      During this time i designed 2 systems for small business
-                    </div>
+export default function Work() {
+  return (
+    <section id="work" className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <span className={styles.sectionNum}>03</span>
+          <h2 className={styles.title}>WORK_HISTORY.LOG</h2>
+          <div className={styles.line} />
+        </div>
+        <div className={styles.prompt}>
+          <span className={styles.green}>C:\&gt;</span>
+          <span className={styles.cmd}> cat /var/log/career.log | grep -v ERROR</span>
+        </div>
+        <div className={styles.timeline}>
+          {work.map((job, i) => (
+            <div key={job.company} className={styles.entry}>
+              <div className={styles.timelineLeft}>
+                <div className={styles.node} />
+                {i < work.length - 1 && <div className={styles.connector} />}
+              </div>
+              <div className={styles.card}>
+                <div className={styles.cardTop}>
+                  <div className={styles.companyRow}>
+                    <span className={styles.company}>{job.company}</span>
+                    <span className={styles.location}>{job.location}</span>
                   </div>
-                </li>
-              </ul>
+                  <div className={styles.roleRow}>
+                    <span className={styles.role}>{job.role}</span>
+                    <span className={styles.period}>{job.period}</span>
+                  </div>
+                </div>
+                <div className={styles.cardDivider} />
+                <p className={styles.desc}>{job.description}</p>
+                <div className={styles.achievements}>
+                  {job.achievements.map((a, j) => (
+                    <div key={j} className={styles.achievement}>
+                      <span className={styles.checkmark}>✓</span>
+                      {a}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
   );
-};
+}

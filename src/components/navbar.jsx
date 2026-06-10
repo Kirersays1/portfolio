@@ -1,71 +1,57 @@
-import { useState, useEffect } from "react"
-import { Navbar, Nav, Container } from "react-bootstrap"
-import navIcon1 from '../assets/img/nav-icon1.svg'
-import navIcon2 from '../assets/img/gitlogo.svg'
-import {
-  BrowserRouter as Router
-} from "react-router-dom"
+import { useState, useEffect } from 'react';
+import styles from './Navbar.module.css';
 
-export const NavBar = () => {
+const navItems = ['SKILLS', 'PROJECTS', 'WORK', 'ARTICLES'];
 
-  const [activeLink, setActiveLink] = useState('home')
-  const [scrolled, setScrolled] = useState(false)
+export default function Navbar() {
+  const [active, setActive] = useState('');
+  const [time, setTime] = useState('');
 
   useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
-    }
+    const tick = () => {
+      const now = new Date();
+      setTime(now.toLocaleTimeString('en-US', { hour12: false }));
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
 
-    window.addEventListener("scroll", onScroll)
+  useEffect(() => {
+    const sections = navItems.map(id => document.getElementById(id.toLowerCase()));
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id.toUpperCase()); });
+      },
+      { threshold: 0.4 }
+    );
+    sections.forEach(s => s && observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
 
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
-
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value)
-  }
+  const scrollTo = (id) => {
+    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-        <Container>
-
-          {/*Espacio para el logo*/}
-          
-          {/* <Navbar.Brand href="/">
-            <img src={''} alt="Logo" />
-          </Navbar.Brand> */}
-
-          {/*Controles del navBar*/}
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
-            <span className="navbar-toggler-icon"></span>
-          </Navbar.Toggle>
-          
-          {/*Botones navBar*/}
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-              <Nav.Link href="#works" className={activeLink === 'works' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('works')}>Work</Nav.Link>
-            </Nav>
-            
-            <span className="navbar-text">
-              <div className="social-icon">
-                {/*LinkedIn*/}
-                <a href="https://www.linkedin.com/in/everessaurodriguezsandoval/"><img src={navIcon1} alt="" /></a>
-                {/*Github*/}
-                <a href="https://github.com/Kirersays1"><img src={navIcon2} alt="" /></a>
-              </div>
-               < a href = "mailto:uselessmexicano@gmail.com"> <button className="vvd"><span>Let’s Connect</span></button></a>
-            </span>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </Router>
-  )
+    <nav className={styles.nav}>
+      <div className={styles.logo}>
+        <span className={styles.logoText}>DATA.SYS</span>
+        <span className={styles.cursor}>█</span>
+      </div>
+      <div className={styles.links}>
+        {navItems.map(item => (
+          <button
+            key={item}
+            className={`${styles.link} ${active === item ? styles.active : ''}`}
+            onClick={() => scrollTo(item)}
+          >
+            {active === item && <span className={styles.prompt}>&gt; </span>}
+            {item}
+          </button>
+        ))}
+      </div>
+      <div className={styles.clock}>{time}</div>
+    </nav>
+  );
 }

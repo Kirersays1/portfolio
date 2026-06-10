@@ -1,0 +1,71 @@
+.section { padding: 80px 40px; max-width: 1000px; margin: 0 auto; }
+.header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.sectionNum { font-family: 'VT323', monospace; font-size: 20px; color: #333; letter-spacing: 2px; }
+.title { font-family: 'VT323', monospace; font-size: 36px; color: #33FF33; text-shadow: 0 0 16px rgba(51,255,51,0.3); letter-spacing: 3px; font-weight: normal; }
+.line { flex: 1; height: 1px; background: linear-gradient(to right, #222, transparent); }
+.prompt { margin-bottom: 40px; }
+.green { font-size: 13px; color: #33FF33; }
+.cmd { font-size: 13px; color: #666; }
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.entry { display: flex; gap: 0; }
+.timelineLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px;
+  flex-shrink: 0;
+  padding-top: 20px;
+}
+.node {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #33FF33;
+  background: #080808;
+  box-shadow: 0 0 8px rgba(51,255,51,0.4);
+  flex-shrink: 0;
+}
+.connector {
+  width: 1px;
+  flex: 1;
+  min-height: 40px;
+  background: linear-gradient(to bottom, #33FF33, #1a3a1a);
+  margin-top: 4px;
+}
+.card {
+  flex: 1;
+  border: 1px solid #1e1e1e;
+  background: var(--surface);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  margin-left: 12px;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: #2a2a2a; }
+.cardTop { margin-bottom: 12px; }
+.companyRow { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.company {
+  font-family: 'VT323', monospace;
+  font-size: 26px;
+  color: #FF9500;
+  letter-spacing: 2px;
+}
+.location { font-size: 11px; color: #444; letter-spacing: 2px; }
+.roleRow { display: flex; justify-content: space-between; align-items: center; }
+.role { font-size: 13px; color: #aaa; letter-spacing: 1px; }
+.period {
+  font-size: 12px;
+  color: #33FF33;
+  letter-spacing: 1px;
+  font-family: 'Share Tech Mono', monospace;
+}
+.cardDivider { height: 1px; background: #1a1a1a; margin: 12px 0; }
+.desc { color: #777; font-size: 13px; line-height: 1.8; margin-bottom: 16px; }
+.achievements { display: flex; flex-direction: column; gap: 6px; }
+.achievement {
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkmark { color: #33FF33; font-size: 11px; flex-shrink: 0; }

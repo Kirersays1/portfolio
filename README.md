@@ -1,42 +1,16 @@
+# React + Vite
 
-# Portfolio Web
-This repo is dedicated for the updates of my Web Portofolio, it includes a litle bit about its components and most important, intructions to deploy to gh-pages.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### Table of content
-- [Installation](#Installation)
-- [Deployment](#Deployment)
-- [Documentation](#Documentation)
+Currently, two official plugins are available:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Installation
+## React Compiler
 
-Install my-project with npm
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-```bash
-cd portfolio
-npm i   
-```
-    
-## Deployment
-To config the url of the page , you need to modify "base" in vite.config.js
-All comands are config in package.json
+## Expanding the ESLint configuration
 
-To run locally :
-```bash
-  npm run dev
-```
-To deploy to gh-pages: 
-```bash
-  npm run deploy
-```
-
-
-## Documentation
-
-[Documentation](https://linktodocumentation)
-
-
-## Demo
-
-https://kirersays1.github.io/portfolio/
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

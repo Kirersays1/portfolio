@@ -1,104 +1,66 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/siga.png";
-import projImg2 from "../assets/img/piggy.png";
-import projImg3 from "../assets/img/blockrunner.png";
-import projImg4 from "../assets/img/PokeReactshot.png";
-import "animate.css";
+import { useState } from 'react';
+import { projects } from '../data/portfolio';
+import styles from './Projects.module.css';
 
-export const Projects = () => {
-  const projects = [
-    {
-      title: "SIGAMEX",
-      description:
-        "App that allows the management of the association's agro-packaging for treatment",
-      imgUrl: projImg1,
-      role: "Mobile developer",
-      link: "https://play.google.com/store/apps/details?id=com.SIGA.loginapp&pcampaignid=web_share",
-      tool: "https://img.shields.io/badge/Java-Android_Studio-blue",
-    },
-    {
-      title: "Piggy Bank",
-      description:
-        "DEMO designed to track expenses and income through a web form built with Streamlit",
-      imgUrl: projImg2,
-      role: "Fullstack",
-      link: "https://github.com/Kirersays1/PiggyBank",
-      tool: "https://img.shields.io/badge/Python-Streamlit-red",
-    },
-    {
-      title: "Block Runners",
-      description: "Endless 3D Runner made in Unity",
-      imgUrl: projImg3,
-      role: "Fullstack",
-      link: "https://play.google.com/store/apps/details?id=com.Kirer.Blockrunners&pcampaignid=web_share",
-      tool: "https://img.shields.io/badge/C%23-Unity-white",
-    },
-    {
-      title: "PokeReact",
-      description: "Pokedex made in React Native Cli",
-      imgUrl: projImg4,
-      role: "Fullstack",
-      link: "",
-      tool: "https://img.shields.io/badge/Js-React_Native-blue",
-    },
-  ];
+const statusColor = { DEPLOYED: '#33FF33', ACTIVE: '#FF9500', ARCHIVED: '#555' };
+
+export default function Projects() {
+  const [selected, setSelected] = useState(0);
+  const proj = projects[selected];
 
   return (
-    <section className="project" id="projects">
-      <Container>
-        <Row>
-          <Col size={12}>
-            <div>
-              <h2>Projects</h2>
-              <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                <Nav
-                  variant="pills"
-                  className="nav-pills mb-5 justify-content-center align-items-center"
-                  id="pills-tab"
+    <section id="projects" className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <span className={styles.sectionNum}>02</span>
+          <h2 className={styles.title}>PROJECT_MANIFEST.LST</h2>
+          <div className={styles.line} />
+        </div>
+        <div className={styles.prompt}>
+          <span className={styles.green}>C:\&gt;</span>
+          <span className={styles.cmd}> dir /projects/*.exe</span>
+        </div>
+        <div className={styles.layout}>
+          <div className={styles.list}>
+            {projects.map((p, i) => (
+              <button
+                key={p.id}
+                className={`${styles.listItem} ${selected === i ? styles.selected : ''}`}
+                onClick={() => setSelected(i)}
+              >
+                <span className={styles.itemId}>{p.id}</span>
+                <span className={styles.itemName}>{p.name}</span>
+                <span
+                  className={styles.itemStatus}
+                  style={{ color: statusColor[p.status] }}
                 >
-                  <Nav.Item>
-                    <Nav.Link eventKey="first">All</Nav.Link>
-                  </Nav.Item>
-
-                  <Nav.Item>
-                    <Nav.Link eventKey="second">Mobile</Nav.Link>
-                  </Nav.Item>
-
-                  <Nav.Item>
-                    <Nav.Link eventKey="third">Web</Nav.Link>
-                  </Nav.Item>
-                </Nav>
-
-                {/*Contenido del primer banner : All*/}
-                <Tab.Content>
-                  <Tab.Pane eventKey="first">
-                    <Row>
-                      {projects.map((project, index) => {
-                        return <ProjectCard key={index} {...project} />;
-                      })}
-                    </Row>
-                  </Tab.Pane>
-
-                  {/*Contenido del segundo banner: Mobile*/}
-                  <Tab.Pane eventKey="second">
-                    <Row>
-                      {projects.map((project, index) => {
-                        return <ProjectCard key={index[0]} {...project} />;
-                      })}
-                    </Row>
-                  </Tab.Pane>
-
-                  {/*Contenido del tercer banner: Web*/}
-                  <Tab.Pane eventKey="third">
-                    <p>Tercer banner</p>
-                  </Tab.Pane>
-                </Tab.Content>
-              </Tab.Container>
+                  {p.status}
+                </span>
+              </button>
+            ))}
+          </div>
+          <div className={styles.detail}>
+            <div className={styles.detailHeader}>
+              <span className={styles.detailId}>{proj.id}</span>
+              <span className={styles.detailStatus} style={{ color: statusColor[proj.status], borderColor: statusColor[proj.status] }}>
+                ● {proj.status}
+              </span>
+              <span className={styles.detailYear}>{proj.year}</span>
             </div>
-          </Col>
-        </Row>
-      </Container>
+            <h3 className={styles.detailName}>{proj.name}</h3>
+            <div className={styles.detailDivider} />
+            <p className={styles.detailDesc}>{proj.description}</p>
+            <div className={styles.tags}>
+              {proj.tags.map(tag => (
+                <span key={tag} className={styles.tag}>{tag}</span>
+              ))}
+            </div>
+            <a href={proj.link} className={styles.detailBtn}>
+              &gt;&gt; VIEW_SOURCE.CMD
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   );
-};
+}

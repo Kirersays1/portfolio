@@ -1,0 +1,137 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 40px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.terminal {
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: 0 0 30px rgba(51,255,51,0.05), 0 0 60px rgba(0,0,0,0.8);
+}
+.titleBar {
+  background: #1a1a1a;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #222;
+}
+.dots { display: flex; gap: 6px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.titleText {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #444;
+  letter-spacing: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.body { padding: 32px 36px 36px; }
+.promptLine {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.prompt {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  color: #33FF33;
+  text-shadow: 0 0 8px rgba(51,255,51,0.4);
+}
+.cmd {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  color: #aaa;
+}
+.output { padding-left: 16px; margin-bottom: 8px; }
+.name {
+  font-family: 'VT323', monospace;
+  font-size: 56px;
+  color: #33FF33;
+  text-shadow: 0 0 20px rgba(51,255,51,0.5), 0 0 40px rgba(51,255,51,0.2);
+  letter-spacing: 4px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.roleRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.roleLabel {
+  font-size: 14px;
+  color: #666;
+  margin-right: 8px;
+}
+.role {
+  font-family: 'VT323', monospace;
+  font-size: 28px;
+  color: #FF9500;
+  text-shadow: 0 0 12px rgba(255,149,0,0.4);
+  letter-spacing: 2px;
+  min-width: 220px;
+}
+.cursor {
+  color: #FF9500;
+  animation: blink 1s step-end infinite;
+  font-size: 20px;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+.locationRow { display: flex; align-items: center; }
+.label { font-size: 13px; color: #666; margin-right: 8px; }
+.val { font-size: 13px; color: #888; letter-spacing: 1px; }
+.bio {
+  padding-left: 16px;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 620px;
+  margin-bottom: 24px;
+  border-left: 2px solid #222;
+}
+.links { display: flex; gap: 12px; padding-left: 16px; flex-wrap: wrap; }
+.link {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  color: #33FF33;
+  text-decoration: none;
+  border: 1px solid #1a6e1a;
+  padding: 6px 14px;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+}
+.link:hover {
+  background: rgba(51,255,51,0.08);
+  border-color: #33FF33;
+  box-shadow: 0 0 12px rgba(51,255,51,0.2);
+}
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 48px;
+  padding: 24px;
+  border: 1px solid #1a1a1a;
+  border-top: 1px solid #222;
+}
+.stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.statNum {
+  font-family: 'VT323', monospace;
+  font-size: 40px;
+  color: #33FF33;
+  text-shadow: 0 0 16px rgba(51,255,51,0.5);
+  line-height: 1;
+}
+.statLabel { font-size: 11px; color: #555; letter-spacing: 2px; }
+.statDiv {
+  font-family: 'VT323', monospace;
+  font-size: 28px;
+  color: #333;
+}
