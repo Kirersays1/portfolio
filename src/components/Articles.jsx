@@ -18,7 +18,6 @@ export default function Articles() {
           <span className={styles.colId}>ID</span>
           <span className={styles.colTitle}>TITLE</span>
           <span className={styles.colDate}>DATE</span>
-          <span className={styles.colRead}>READ_TIME</span>
           <span className={styles.colTags}>TAGS</span>
         </div>
         <div className={styles.tableBody}>
@@ -30,7 +29,6 @@ export default function Articles() {
                 <span className={styles.artExcerpt}>{art.excerpt}</span>
               </div>
               <span className={styles.colDate}>{art.date}</span>
-              <span className={styles.colRead}>{art.readTime}</span>
               <div className={styles.colTags}>
                 {art.tags.map(tag => (
                   <span key={tag} className={styles.tag}>{tag}</span>

@@ -2,10 +2,10 @@ export const personal = {
   name: "EVER_RODRIGUEZ",
   title: "DATA SCIENTIST // ANALYST",
   location: "MEXICO > REMOTE",
-  bio: "Turning raw data into actionable insights. Specializing in ML pipelines, statistical modeling, and dashboards that actually get used.",
+  bio: "Men without ideals are only animals.Turning raw data into actionable insights. Specializing in ML pipelines, statistical modeling, and dashboards that actually get used.",
   email: "everrodriguez7@gmail.com",
-  github: "github.com/alexreyes",
-  linkedin: "linkedin.com/in/alexreyes",
+  github: "github.com/Kirersays1",
+  linkedin: "linkedin.com/in/everessaurodriguezsandoval/",
 };
 
 export const skills = [
@@ -14,7 +14,7 @@ export const skills = [
   { category: "DATA_TOOLS", items: ["Pandas", "NumPy", "Spark", "dbt", "Airflow"] },
   { category: "VISUALIZATION", items: ["Tableau", "Power BI", "Plotly", "D3.js", "Seaborn"] },
   { category: "DATABASES", items: ["PostgreSQL", "BigQuery", "Snowflake", "MongoDB", "Redis"] },
-  { category: "CLOUD_INFRA", items: ["GCP", "AWS", "Docker", "Kubernetes", "Terraform"] },
+  { category: "CLOUD_INFRA", items: ["GCP", "AWS", "Docker", "Kubernetes"] },
 ];
 
 export const projects = [
@@ -58,66 +58,88 @@ export const projects = [
 
 export const work = [
   {
-    company: "DATANEXUS_CORP",
-    role: "SR. DATA SCIENTIST",
-    period: "2022 — PRESENT",
-    location: "MEX_CITY",
-    description: "Lead data science initiatives for 3 product lines. Built ML infrastructure serving 50M+ predictions/month. Mentoring team of 4 junior scientists.",
-    achievements: ["Reduced model inference latency by 60%", "Launched 2 production ML models", "Established MLOps best practices"],
+    company: "KEYPLEX",
+    role: "FULLSTACK DEVELOPER",
+    period: "2025 — 2026",
+    location: "REMOTE",
+    description: "Developed and optimized full-stack web platforms using WordPress, PHP, REST APIs, and MySQL, while managing hosting infrastructure and responsive frontend components.",
+    achievements: ["Improved latency and storage by 60%", "Developed responsive UI componentes", "Established best practices"],
   },
   {
-    company: "ANALYTICS_LABS",
+    company: "NDA",
     role: "DATA ANALYST",
-    period: "2020 — 2022",
+    period: "2024 — 2025",
+    location: "REMOTE",
+    description: "Designed and maintained reporting infrastructure for 15+ stakeholders. Built automated pipeline saving 20hrs/week of manual work.",
+    achievements: ["Automated 80% of weekly reports", "Created self-service analytics portal", "Trained 10+ non-technical users"],
+  },
+  {
+    company: "AMOCALY",
+    role: "MOBILE DEVELOPER",
+    period: "2023 — 2024",
     location: "REMOTE",
     description: "Designed and maintained reporting infrastructure for 15+ stakeholders. Built automated pipeline saving 20hrs/week of manual work.",
     achievements: ["Automated 80% of weekly reports", "Created self-service analytics portal", "Trained 30+ non-technical users"],
   },
   {
-    company: "INSIGHT_MX",
-    role: "JR. DATA ANALYST",
-    period: "2018 — 2020",
-    location: "MEX_CITY",
-    description: "First data hire. Built the company's first data warehouse from scratch. Created dashboards adopted across all departments.",
-    achievements: ["Built data warehouse from zero", "Designed 5 executive dashboards", "Reduced reporting time by 75%"],
+    company: "TDCREATIVO",
+    role: "GRAPHIC DESIGNER/TECHNICAL MAINTENANCE",
+    period: "2015-2020",
+    location: "MEXICO",
+    description: "First hire. Built the company's first database from scratch, designed visual interfaces and prototypes while providing technical maintenance and creative solutions for client projects.",
+    achievements: ["Created high-fidelity mockups and visual assets", "Translated user requirements into intuitive designs", "Delivered technical support and maintenance services"],
   },
 ];
 
 export const articles = [
-  {
+   {
     id: "ART_001",
-    title: "Why Most ML Models Die in Staging",
-    date: "2024-11-15",
-    readTime: "8 MIN",
-    tags: ["MLOps", "Engineering"],
-    excerpt: "The gap between a working Jupyter notebook and a production-grade ML system is wider than most teams expect. Here's what I learned the hard way.",
+    title: "Sign Language Translation with No Language Left Behind (NLLB): A Mexican Sign Language Case Study",
+    date: "PENDING PUBLICATION",
+    tags: ["Deep learning", "Transformers"],
+    excerpt: "Using an LLM you can generate new sentences for unseen problems with language",
     link: "#",
   },
   {
     id: "ART_002",
-    title: "Bayesian A/B Testing: Stop Waiting for Significance",
-    date: "2024-09-03",
-    readTime: "12 MIN",
-    tags: ["Statistics", "Experimentation"],
-    excerpt: "Frequentist A/B tests waste time and money. A practical guide to Bayesian experimentation with real code examples.",
+    title: "A Lightweight CNN–Transformer for Histopathological Classification of Pancreatic Cancer",
+    date: "PENDING PUBLICATION",
+    tags: ["Deep learning", "Hyspatological images"],
+    excerpt: "Bringing fast, lightweight, and explainable AI to early pancreatic cancer detection.",
     link: "#",
   },
   {
     id: "ART_003",
-    title: "SQL Patterns Every Data Scientist Should Know",
-    date: "2024-06-20",
-    readTime: "10 MIN",
-    tags: ["SQL", "Tutorial"],
-    excerpt: "Window functions, CTEs, and recursive queries that will make your analysts love you. Or at least stop pestering you.",
-    link: "#",
+    title: "Convolutional Networks for Agriculture: MobileNetV3 vs. InceptionV3 in Strawberry Disease Recognition",
+    date: "2025-12-20",
+    tags: ["Python", "Deep Learning"],
+    excerpt: "Empowering smart agriculture through portable AI for early strawberry disease detection.",
+    link: "https://citt.itsm.edu.mx/ingeniantes/pdfversion/ingeniantes12no2vol3-esp.pdf",
   },
   {
     id: "ART_004",
-    title: "Building a Feature Store on a Startup Budget",
-    date: "2024-03-12",
-    readTime: "15 MIN",
-    tags: ["MLOps", "Architecture"],
-    excerpt: "You don't need Feast or Tecton to have a decent feature store. Here's how to build one with dbt, Postgres, and some duct tape.",
-    link: "#",
+    title: "Mobile detection of strawberry plant diseases using MobileNetV3 and Kotlin",
+    date: "2025-09-20",
+    tags: ["Mobile Development","Deep learning"],
+    excerpt: "Bring the tools to everyone, specially the ones who needed them the most",
+    link: "https://doi.org/10.35429/JITC.2025.9.20.2.1.7",
   },
+  {
+    id: "ART_005",
+    title: "Geolocation mobile application for delivery of agrochemical packages",
+    date: "2024-03-12",
+    tags: ["Mobile Development", "Geo-information"],
+    excerpt: "Creating and promoting tools to ",
+    link: "https://doi.org/10.35429/JITC.2023.18.7.31.37",
+  },
+];
+
+export const certificactions =[
+  {
+    id:"",
+    title : "",
+    date : "",
+    image : "",
+    link: "",
+  }
 ];

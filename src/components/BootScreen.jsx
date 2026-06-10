@@ -3,8 +3,8 @@ import styles from './BootScreen.module.css';
 
 const bootLines = [
   "BIOS v2.31 (C) 2001 DATA_SYS INC.",
-  "CPU: INTEL 8086 @ 4.77MHz",
-  "MEMORY TEST: 640K OK",
+  "CPU: INTEL 845 @ 1.7GHz",
+  "MEMORY TEST: 1GB OK",
   "LOADING KERNEL...",
   "INITIALIZING DISPLAY ADAPTER...",
   "MOUNTING /dev/portfolio...",
