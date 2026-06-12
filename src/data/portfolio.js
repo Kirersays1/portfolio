@@ -134,12 +134,114 @@ export const articles = [
   },
 ];
 
-export const certificactions =[
+
+
+export const education = [
   {
-    id:"",
-    title : "",
-    date : "",
-    image : "",
-    link: "",
-  }
+    id: "EDU_001",
+    degree: "M.SC. COMPUTER SCIENCE",
+    institution: "MEXICAN INSTITUTE OF TECHNOLOGY",
+    location: "MEX",
+    period: "2024 — 2026",
+    gpa: "9.4 / 10.0",
+    thesis: "Software Component for Detecting Diseases and Pests Based on Images of Strawberry and Blueberry Leaves",
+    highlights: ["Teaching assistant - Computer lab", "Research assistant — AI Lab", "Published 2 papers in conferences"],
+  },
+  {
+    id: "EDU_002",
+    degree: "B.SC. INFORMATIC ENGINEERING",
+    institution: "MEXICAN INSTITUTE OF TECHNOLOGY",
+    location: "MEX",
+    period: "2019-2023",
+    gpa: "9.5 / 10.0",
+    thesis: "SIGAMEX APP",
+    highlights: ["Graduate with Honor", "Computer Department Honor Roll"],
+  },
 ];
+
+export const certifications = [
+  {
+    id: "CERT_001",
+    name: "GOOGLE DATA ANALYSIS PROFESSIONAL CERTIFICATE",
+    issuer: "GOOGLE",
+    date: "2023-01",
+    expires: "NO-EXPIRATION",
+    credentialId: "8B4EM8FD6NTH",
+    level: "PROFESSIONAL",
+    verified: true,
+    link: "https://coursera.org/share/d11eb6175a78695babb89513fa0dbcfb",
+  },
+  {
+    id: "CERT_002",
+    name: "GOOGLE CIBERSECURITY PROFESSIONAL CERTIFICATE",
+    issuer: "GOOGLE",
+    date: "2024-01",
+    expires: "NO-EXPIRATION",
+    credentialId: "411b5294-4252-497b-b6d7-3a9992b8dd98",
+    level: "PROFESSIONAL",
+    verified: true,
+    link: "https://www.credly.com/earner/earned/badge/411b5294-4252-497b-b6d7-3a9992b8dd98",
+  },
+  {
+    id: "CERT_003",
+    name: "DATA SCIENCE PROFESSIONAL",
+    issuer: "IBM",
+    date: "2025-10",
+    expires: "NO-EXPIRATION",
+    credentialId: "eb1a2f9a-8705-4b91-beb7-9033725b738d",
+    level: "PROFESSIONAL",
+    verified: true,
+    link: "https://www.credly.com/earner/earned/badge/eb1a2f9a-8705-4b91-beb7-9033725b738d",
+  },
+  {
+    id: "CERT_004",
+    name: "GOOGLE CLOUD DATA ANALYTICS",
+    issuer: "GOOGLE",
+    date: "2026-06",
+    expires: "2029-06",
+    credentialId: "3082fe71-f494-4f1f-b8e8-fb76f4a4949f",
+    level: "ASSOCIATE",
+    verified: true,
+    link: "https://www.credly.com/earner/earned/badge/3082fe71-f494-4f1f-b8e8-fb76f4a4949f",
+  },
+];
+
+export const hobbies = [
+  {
+    id: "HOB_001",
+    name: "READING",
+    description: "Read a lot of technical books, along as poetry, mistery and more romantic stuff",
+    tags: ["Reading", "Books", "Mistery"],
+    level: 95,
+  },
+  {
+    id: "HOB_002",
+    name: "GAMING",
+    description: "Competitive online player",
+    tags: ["Strategy", "Games"],
+    level: 78,
+  },
+  {
+    id: "HOB_004",
+    name: "ART",
+    description: "Drawing, Illustration and 3D modelling",
+    tags: ["Art", "Blender", "Art"],
+    level: 70,
+  },
+  {
+    id: "HOB_005",
+    name: "DANCING",
+    description: "POLINESIAN DANCE, DANCING ALL AROUND MEXICO SINCE 2009",
+    tags: ["Dancing", "Polinesian", "IRL"],
+    level: 68,
+  },
+];
+
+export const contact = {
+  email: "everrodriguez7@gmail.com",
+  github: "github.com/Kirersays1",
+  linkedin: "linkedin.com/in/everessaurodriguezsandoval/",
+  location: "GUADALAJARA, MX",
+  availability: "OPEN_TO_OFFERS",
+  responseTime: "< 24 HRS",
+};

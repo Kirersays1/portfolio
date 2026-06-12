@@ -78,25 +78,21 @@ export default function Hero() {
               [LINKEDIN]
             </a>
           </div>
-          <div className={styles.promptLine} style={{marginTop:'16px'}}>
-            <span className={styles.prompt}>C:\USER\{personal.name}&gt;</span>
-            <span className={styles.cursor}>█</span>
-          </div>
         </div>
       </div>
       <div className={styles.stats}>
         <div className={styles.stat}>
-          <span className={styles.statNum}>6+</span>
+          <span className={styles.statNum}>3+</span>
           <span className={styles.statLabel}>YRS_EXPERIENCE</span>
         </div>
         <div className={styles.statDiv}>//</div>
         <div className={styles.stat}>
-          <span className={styles.statNum}>20+</span>
+          <span className={styles.statNum}>10+</span>
           <span className={styles.statLabel}>MODELS_SHIPPED</span>
         </div>
         <div className={styles.statDiv}>//</div>
         <div className={styles.stat}>
-          <span className={styles.statNum}>50M+</span>
+          <span className={styles.statNum}>1K+</span>
           <span className={styles.statLabel}>PREDICTIONS/DAY</span>
         </div>
       </div>

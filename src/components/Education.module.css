@@ -1,0 +1,104 @@
+.section { padding: 80px 40px; max-width: 1000px; margin: 0 auto; }
+.header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.sectionNum { font-family: 'VT323', monospace; font-size: 20px; color: #333; letter-spacing: 2px; }
+.title { font-family: 'VT323', monospace; font-size: 36px; color: #33FF33; text-shadow: 0 0 16px rgba(51,255,51,0.3); letter-spacing: 3px; font-weight: normal; }
+.line { flex: 1; height: 1px; background: linear-gradient(to right, #222, transparent); }
+.prompt { margin-bottom: 36px; }
+.green { font-size: 13px; color: #33FF33; }
+.cmd { font-size: 13px; color: #666; }
+
+.cards { display: flex; flex-direction: column; gap: 12px; }
+
+/* Scan-in animation */
+.card {
+  border: 1px solid #1e1e1e;
+  background: var(--surface);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s;
+}
+.card.visible { opacity: 1; transform: translateX(0); }
+.card.expanded { border-color: #2a3a2a; }
+.card:hover { border-color: #252525; }
+
+.cardToggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+}
+.cardLeft { display: flex; align-items: center; gap: 16px; flex: 1; min-width: 0; }
+.eduId { font-size: 10px; color: #444; letter-spacing: 1px; flex-shrink: 0; }
+.titleGroup { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.degree {
+  font-family: 'VT323', monospace;
+  font-size: 26px;
+  color: #FF9500;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+.institution { font-size: 12px; color: #666; letter-spacing: 1px; }
+.cardRight { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
+.period { font-size: 12px; color: #33FF33; letter-spacing: 1px; font-family: 'Share Tech Mono', monospace; }
+.chevron { font-size: 11px; color: #444; transition: color 0.2s; }
+.expanded .chevron { color: #33FF33; }
+
+/* Accordion body */
+.cardBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 0px solid transparent;
+}
+.cardBody.open {
+  max-height: 600px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.metaRow {
+  display: flex;
+  gap: 40px;
+  padding: 20px 24px 0;
+  flex-wrap: wrap;
+}
+.metaItem { display: flex; align-items: center; gap: 10px; }
+.metaLabel { font-size: 10px; color: #444; letter-spacing: 2px; }
+.metaVal { font-size: 13px; color: #aaa; letter-spacing: 1px; }
+
+.thesisBlock {
+  margin: 16px 24px;
+  padding: 12px 16px;
+  background: #0a0a0a;
+  border-left: 2px solid #FF9500;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.thesisLabel { font-size: 9px; color: #cc7700; letter-spacing: 2px; }
+.thesisText { font-size: 13px; color: #888; font-style: italic; line-height: 1.5; }
+
+.highlightList { padding: 4px 24px 24px; display: flex; flex-direction: column; gap: 8px; }
+.hlLabel { font-size: 9px; color: #444; letter-spacing: 2px; margin-bottom: 4px; display: block; }
+.hlItem { display: flex; align-items: flex-start; gap: 12px; }
+.hlMarker { font-size: 10px; color: #33FF33; flex-shrink: 0; margin-top: 2px; }
+.hlText { font-size: 13px; color: #777; line-height: 1.5; }
+
+/* Mobile */
+@media (max-width: 600px) {
+  .section { padding: 60px 20px; }
+  .title { font-size: 26px; }
+  .cardToggle { padding: 16px; flex-wrap: wrap; gap: 10px; }
+  .cardLeft { gap: 10px; }
+  .degree { font-size: 20px; }
+  .period { font-size: 11px; }
+  .metaRow { padding: 16px 16px 0; gap: 20px; }
+  .thesisBlock { margin: 12px 16px; }
+  .highlightList { padding: 4px 16px 20px; }
+}
