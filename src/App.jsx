@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Work from './components/Work';
-import Articles from './components/Articles';
+import Publications from './components/Publications';
 import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Hobbies from './components/Hobbies';
@@ -30,7 +30,7 @@ export default function App() {
           <div className={styles.sectionWrapper}><Skills /></div>
           <div className={styles.sectionWrapper}><Projects /></div>
           <div className={styles.sectionWrapper}><Work /></div>
-          <div className={styles.sectionWrapper}><Articles /></div>
+          <div className={styles.sectionWrapper}><Publications /></div>
           <div className={styles.sectionWrapper}><Education /></div>
           <div className={styles.sectionWrapper}><Certifications /></div>
           <div className={styles.sectionWrapper}><Hobbies /></div>

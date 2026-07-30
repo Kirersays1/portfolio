@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 
-const navItems = ['SKILLS', 'PROJECTS', 'WORK', 'ARTICLES', 'EDUCATION', 'CERTS', 'HOBBIES', 'CONTACT'];
-const sectionIds = ['skills', 'projects', 'work', 'articles', 'education', 'certifications', 'hobbies', 'contact'];
+const navItems = ['SKILLS', 'PROJECTS', 'WORK', 'PUBLICATIONS', 'EDUCATION', 'CERTS', 'HOBBIES', 'CONTACT'];
+const sectionIds = ['skills', 'projects', 'work', 'publications', 'education', 'certifications', 'hobbies', 'contact'];
 
 export default function Navbar() {
   const [active, setActive] = useState('');

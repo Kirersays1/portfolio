@@ -2,19 +2,20 @@ import { useState, useEffect } from 'react';
 import styles from './BootScreen.module.css';
 
 const bootLines = [
-  "BIOS v2.31 (C) 2001 DATA_SYS INC.",
+  "BIOS v9.11 (C) 2001 DATA_SYS INC.",
   "CPU: INTEL 845 @ 1.7GHz",
   "MEMORY TEST: 1GB OK",
   "LOADING KERNEL...",
   "INITIALIZING DISPLAY ADAPTER...",
-  "MOUNTING /dev/portfolio...",
+  "MOUNTING HOME DIRECTORY : /home/ever...",
   "LOADING PROFILE: EVER_RODRIGUEZ.DAT",
   "PARSING SKILLS DATABASE...",
+  "I CAN STILL REMEMBER YOU",
   "LOADING PROJECT MANIFESTS...",
   "ESTABLISHING CONNECTIONS...",
   "SYSTEM READY.",
   "",
-  "C:\\> _",
+  "/home/ever$ _",
 ];
 
 export default function BootScreen({ onComplete }) {

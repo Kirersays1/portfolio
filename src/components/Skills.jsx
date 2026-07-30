@@ -14,7 +14,7 @@ export default function Skills() {
           <div className={styles.line} />
         </div>
         <div className={styles.prompt}>
-          <span className={styles.green}>C:\&gt;</span>
+          <span className={styles.green}>/home/ever/&gt;</span>
           <span className={styles.cmd}> ls -la /skills/</span>
         </div>
         <div className={styles.grid}>

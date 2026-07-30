@@ -11,7 +11,7 @@ export default function Work() {
           <div className={styles.line} />
         </div>
         <div className={styles.prompt}>
-          <span className={styles.green}>C:\&gt;</span>
+          <span className={styles.green}>/home/ever/&gt;</span>
           <span className={styles.cmd}> cat /var/log/career.log | grep -v ERROR</span>
         </div>
         <div className={styles.timeline}>

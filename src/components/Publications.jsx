@@ -1,18 +1,18 @@
-import { articles } from '../data/portfolio';
-import styles from './Articles.module.css';
+import { publications } from '../data/portfolio';
+import styles from './Publications.module.css';
 
-export default function Articles() {
+export default function Publications() {
   return (
-    <section id="articles" className={styles.section}>
+    <section id="publications" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.sectionNum}>04</span>
-          <h2 className={styles.title}>ARTICLES.DB</h2>
+          <h2 className={styles.title}>publications.DB</h2>
           <div className={styles.line} />
         </div>
         <div className={styles.prompt}>
-          <span className={styles.green}>C:\&gt;</span>
-          <span className={styles.cmd}> SELECT * FROM articles ORDER BY date DESC;</span>
+          <span className={styles.green}>/home&gt;</span>
+          <span className={styles.cmd}> SELECT * FROM publications ORDER BY date DESC;</span>
         </div>
         <div className={styles.tableHeader}>
           <span className={styles.colId}>ID</span>
@@ -21,7 +21,7 @@ export default function Articles() {
           <span className={styles.colTags}>TAGS</span>
         </div>
         <div className={styles.tableBody}>
-          {articles.map((art) => (
+          {publications.map((art) => (
             <a key={art.id} href={art.link} className={styles.row}>
               <span className={styles.colId}>{art.id}</span>
               <div className={styles.colTitle}>

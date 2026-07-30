@@ -47,7 +47,7 @@ export default function Hero() {
         </div>
         <div className={styles.body}>
           <div className={styles.promptLine}>
-            <span className={styles.prompt}>C:\USER\{personal.name}&gt;</span>
+            <span className={styles.prompt}>/home/ever/&gt;</span>
             <span className={styles.cmd}> whoami</span>
           </div>
           <div className={styles.output}>
@@ -63,7 +63,7 @@ export default function Hero() {
             </div>
           </div>
           <div className={styles.promptLine} style={{marginTop:'32px'}}>
-            <span className={styles.prompt}>C:\USER\{personal.name}&gt;</span>
+            <span className={styles.prompt}>/home/ever/&gt;</span>
             <span className={styles.cmd}> cat bio.txt</span>
           </div>
           <div className={styles.bio}>{personal.bio}</div>

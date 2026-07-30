@@ -96,7 +96,7 @@ export default function Hobbies() {
           <div className={styles.line} />
         </div>
         <div className={styles.prompt}>
-          <span className={styles.green}>C:\&gt;</span>
+          <span className={styles.green}>/home/ever/&gt;</span>
           <span className={styles.cmd}> ps aux | grep "interests" --color</span>
         </div>
         <div className={styles.hint}>

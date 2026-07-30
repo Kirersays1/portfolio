@@ -74,7 +74,7 @@ export default function Contact() {
     addLog('> INITIALIZING TRANSMISSION...', '#FF9500');
     const steps = [
       ['> ENCRYPTING PAYLOAD...', '#FF9500'],
-      ['> ROUTING TO alex@datasys.dev...', '#FF9500'],
+      ['> ROUTING TO MAIL', '#FF9500'],
       ['> HANDSHAKE_OK — MESSAGE DELIVERED ✓', '#33FF33'],
     ];
     steps.forEach(([msg, color], i) => {
@@ -100,7 +100,7 @@ export default function Contact() {
           <div className={styles.line} />
         </div>
         <div className={styles.prompt}>
-          <span className={styles.green}>C:\&gt;</span>
+          <span className={styles.green}>/home/ever/&gt;</span>
           <span className={styles.cmd}> ./contact.sh --init-session --encrypt</span>
         </div>
 

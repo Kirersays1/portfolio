@@ -112,7 +112,7 @@ export default function Certifications() {
           <div className={styles.line} />
         </div>
         <div className={styles.prompt}>
-          <span className={styles.green}>C:\&gt;</span>
+          <span className={styles.green}>/home/&gt;</span>
           <span className={styles.cmd}> query credentials --status=active --sort=date</span>
         </div>
 
